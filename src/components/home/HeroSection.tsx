@@ -22,14 +22,12 @@ export default function HeroSection() {
             Successful investing goes far beyond charts and technical analysis; it requires a deep understanding of market psychology, geopolitical influences, economic news, and – crucially – your own emotional responses. The goal of Investor GPS is to provide tools, and perspective needed to chart your own course towards financial success.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button asChild size="lg" className="px-8">
-              <Link to="/dashboard">Explore Dashboard</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="px-8">
-              <Link to="/blog">Read Latest Analysis</Link>
-            </Button>
-          </div>
+          <Button asChild size="lg" className="px-8">
+            <Link to="/dashboard">Explore Dashboard</Link>
+          </Button>
+          <Button asChild variant="outline" size="lg" className="px-8">
+            <Link to="/blog">Read Latest Analysis</Link>
+          </Button>
         </div>
       </div>
     </div>
