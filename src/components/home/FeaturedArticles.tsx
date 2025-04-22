@@ -1,6 +1,4 @@
 
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import BlogCard from "@/components/blog/BlogCard";
 
 // Mock blog data
@@ -69,45 +67,17 @@ const featuredArticles = [
 ];
 
 export default function FeaturedArticles() {
-  const [displayCount, setDisplayCount] = useState(3);
-  const hasMore = displayCount < featuredArticles.length;
-  
-  const showMore = () => {
-    setDisplayCount(prev => Math.min(prev + 3, featuredArticles.length));
-  };
-
+  // Only show the 4 latest articles horizontally, equal sizing
   return (
-    <section className="py-16 bg-secondary/30">
+    <section className="py-10 bg-secondary/30">
       <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-heading font-bold mb-3">
-            Featured Analysis & Insights
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Deep dive into markets with our expert analysis, investment ideas, and economic insights.
-          </p>
-        </div>
-        
-        <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-2 mb-8">
-          {featuredArticles.slice(0, 1).map((article) => (
-            <BlogCard key={article.id} {...article} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {featuredArticles.slice(0, 4).map((article) => (
+            <BlogCard key={article.id} {...article} featured={false} />
           ))}
         </div>
-        
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {featuredArticles.slice(1, displayCount).map((article) => (
-            <BlogCard key={article.id} {...article} />
-          ))}
-        </div>
-        
-        {hasMore && (
-          <div className="mt-10 text-center">
-            <Button onClick={showMore} variant="outline" size="lg">
-              Load More Articles
-            </Button>
-          </div>
-        )}
       </div>
     </section>
   );
 }
+
