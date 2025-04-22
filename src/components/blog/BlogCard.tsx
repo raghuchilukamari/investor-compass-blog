@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -58,7 +59,7 @@ export default function BlogCard({
             </div>
           </div>
           <Link to={`/blog/${id}`}>
-            <h3 className="font-heading text-base font-semibold leading-tight mb-1 hover:text-primary transition-colors line-clamp-2">{title}</h3>
+            <h3 className="font-heading text-sm font-semibold leading-tight mb-1 hover:text-primary transition-colors line-clamp-2">{title}</h3>
           </Link>
           <p className="text-xs text-muted-foreground mb-2 line-clamp-3">
             {excerpt}
