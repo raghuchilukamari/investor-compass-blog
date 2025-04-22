@@ -67,10 +67,17 @@ const featuredArticles = [
 ];
 
 export default function FeaturedArticles() {
-  // Show 5 articles, arranged horizontally and squared/compact
   return (
     <section className="py-6 bg-secondary/30">
       <div className="container">
+        <div className="mb-6">
+          <h2 className="text-2xl font-heading font-bold text-center">
+            Latest Investment Insights
+          </h2>
+          <p className="text-muted-foreground text-center mt-2">
+            Explore our expert analysis and market perspectives
+          </p>
+        </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {featuredArticles.slice(0, 5).map((article) => (
             <BlogCard key={article.id} {...article} featured={false} compact />
@@ -80,3 +87,4 @@ export default function FeaturedArticles() {
     </section>
   );
 }
+
