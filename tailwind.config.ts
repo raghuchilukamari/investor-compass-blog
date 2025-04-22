@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,22 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+                success: {
+                    DEFAULT: 'hsl(var(--success))',
+                    foreground: 'hsl(var(--success-foreground))'
+                },
+                warning: {
+                    DEFAULT: 'hsl(var(--warning))',
+                    foreground: 'hsl(var(--warning-foreground))'
+                },
+                info: {
+                    DEFAULT: 'hsl(var(--info))',
+                    foreground: 'hsl(var(--info-foreground))'
+                },
+                bullish: 'hsl(var(--bullish))',
+                neutral: 'hsl(var(--neutral))',
+                bearish: 'hsl(var(--bearish))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +100,32 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+                'ticker': {
+                    '0%': { transform: 'translateX(0)' },
+                    '100%': { transform: 'translateX(-100%)' }
+                },
+                'pulse-green': {
+                    '0%, 100%': { backgroundColor: 'rgba(34, 197, 94, 0.1)' },
+                    '50%': { backgroundColor: 'rgba(34, 197, 94, 0.2)' }
+                },
+                'pulse-red': {
+                    '0%, 100%': { backgroundColor: 'rgba(239, 68, 68, 0.1)' },
+                    '50%': { backgroundColor: 'rgba(239, 68, 68, 0.2)' }
+                }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'ticker': 'ticker 25s linear infinite',
+                'pulse-green': 'pulse-green 2s ease-in-out infinite',
+                'pulse-red': 'pulse-red 2s ease-in-out infinite'
+			},
+            fontFamily: {
+                'heading': ['Georgia', 'serif'],
+                'sans': ['Inter', 'system-ui', 'sans-serif'],
+                'mono': ['JetBrains Mono', 'monospace'],
+            }
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
