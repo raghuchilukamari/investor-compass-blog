@@ -67,17 +67,16 @@ const featuredArticles = [
 ];
 
 export default function FeaturedArticles() {
-  // Only show the 4 latest articles horizontally, equal sizing
+  // Show 5 articles, arranged horizontally and squared/compact
   return (
-    <section className="py-10 bg-secondary/30">
+    <section className="py-6 bg-secondary/30">
       <div className="container">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {featuredArticles.slice(0, 4).map((article) => (
-            <BlogCard key={article.id} {...article} featured={false} />
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          {featuredArticles.slice(0, 5).map((article) => (
+            <BlogCard key={article.id} {...article} featured={false} compact />
           ))}
         </div>
       </div>
     </section>
   );
 }
-
