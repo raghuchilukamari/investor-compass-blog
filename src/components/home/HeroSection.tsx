@@ -19,8 +19,7 @@ export default function HeroSection() {
           </h1>
           
           <p className="text-xl text-muted-foreground max-w-2xl">
-            Data-driven insights, market sentiment analysis, and macroeconomic indicators to navigate 
-            today's complex financial markets with confidence.
+            Successful investing goes far beyond charts and technical analysis; it requires a deep understanding of market psychology, geopolitical influences, economic news, and – crucially – your own emotional responses. The goal of Investor GPS is to provide tools, and perspective needed to chart your own course towards financial success.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
@@ -30,25 +29,6 @@ export default function HeroSection() {
             <Button asChild variant="outline" size="lg" className="px-8">
               <Link to="/blog">Read Latest Analysis</Link>
             </Button>
-          </div>
-          
-          <div className="pt-8 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 w-full">
-            <div className="flex flex-col items-center">
-              <p className="text-3xl font-bold text-primary">127+</p>
-              <p className="text-sm text-muted-foreground">Macroeconomic Indicators</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="text-3xl font-bold text-primary">98%</p>
-              <p className="text-sm text-muted-foreground">Data Accuracy</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="text-3xl font-bold text-primary">24/7</p>
-              <p className="text-sm text-muted-foreground">Market Monitoring</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="text-3xl font-bold text-primary">15K+</p>
-              <p className="text-sm text-muted-foreground">Active Investors</p>
-            </div>
           </div>
         </div>
       </div>
