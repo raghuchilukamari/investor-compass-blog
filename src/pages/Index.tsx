@@ -4,6 +4,7 @@ import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/home/HeroSection";
 import FeaturedArticles from "@/components/home/FeaturedArticles";
 import MarketTicker from "@/components/ui/market-ticker";
+import MarketInsightsOverlay from "@/components/home/MarketInsightsOverlay";
 import NewsletterSignup from "@/components/blog/NewsletterSignup";
 
 export default function Index() {
@@ -13,6 +14,7 @@ export default function Index() {
       <MarketTicker />
       <main className="flex-grow">
         <HeroSection />
+        <MarketInsightsOverlay />
         <FeaturedArticles />
         
         <section className="py-16 container">
