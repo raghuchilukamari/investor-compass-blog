@@ -31,8 +31,8 @@ export default function BlogCard({
 }: BlogCardProps) {
   if (compact) {
     return (
-      <Card className="overflow-hidden border-0 shadow-sm rounded-lg aspect-square flex flex-col">
-        <div className="relative w-full aspect-square">
+      <Card className="overflow-hidden border-0 shadow-sm rounded-lg aspect-[4/5] flex flex-col">
+        <div className="relative w-full h-40">
           <img
             src={imageSrc}
             alt={title}

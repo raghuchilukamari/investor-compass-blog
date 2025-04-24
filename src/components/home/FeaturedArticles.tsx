@@ -1,3 +1,4 @@
+
 import BlogCard from "@/components/blog/BlogCard";
 
 interface FeaturedArticlesProps {
@@ -81,14 +82,14 @@ export default function FeaturedArticles({ compact = false }: FeaturedArticlesPr
   }
 
   return (
-    <section className="py-6 bg-secondary/30">
+    <section className="py-12 bg-secondary/30">
       <div className="container">
-        <div className="mb-6">
-          <h2 className="text-2xl font-heading font-bold text-center">
-            Latest Investment Insights
+        <div className="max-w-2xl mx-auto text-center mb-10">
+          <h2 className="text-3xl font-heading font-bold mb-3">
+            Expert Market Analysis
           </h2>
-          <p className="text-muted-foreground text-center mt-2">
-            Explore our expert analysis and market perspectives
+          <p className="text-muted-foreground">
+            Stay informed with our curated collection of in-depth market analysis and investment insights from industry experts.
           </p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
