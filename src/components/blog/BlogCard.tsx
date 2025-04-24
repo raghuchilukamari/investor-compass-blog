@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -40,7 +39,10 @@ export default function BlogCard({
           />
           <div className="absolute top-3 left-3 flex flex-wrap gap-1 z-10">
             {categories.map((category) => (
-              <Badge key={category} className="bg-background/80 backdrop-blur-sm text-xs px-2 py-0.5">
+              <Badge 
+                key={category} 
+                className="bg-blue-500/80 text-white text-xs px-2 py-0.5 backdrop-blur-sm"
+              >
                 {category}
               </Badge>
             ))}
@@ -101,7 +103,10 @@ export default function BlogCard({
         />
         <div className="absolute top-4 left-4 flex flex-wrap gap-2">
           {categories.map((category) => (
-            <Badge key={category} className="bg-background/80 backdrop-blur-sm">
+            <Badge 
+              key={category} 
+              className="bg-blue-500/80 text-white backdrop-blur-sm"
+            >
               {category}
             </Badge>
           ))}
