@@ -1,6 +1,7 @@
 
 import { Card } from "@/components/ui/card";
 import MacrometerCard from "@/components/dashboard/MacrometerCard";
+import Header from "@/components/layout/Header";
 
 // Using the same mock data from the dashboard
 const macroEconomicIndicators = [
@@ -91,25 +92,28 @@ const marketIndicators = [
 
 export default function MarketMacrometer() {
   return (
-    <div className="min-h-screen bg-background">
-      <div className="container py-12">
-        <div className="space-y-4 mb-8">
-          <h1 className="text-4xl font-heading font-bold">Market Macrometer</h1>
-          <p className="text-muted-foreground text-lg">
-            Comprehensive analysis of key economic and market indicators
-          </p>
-        </div>
-        <div className="grid md:grid-cols-2 gap-6">
-          <MacrometerCard 
-            title="Macroeconomic Indicators" 
-            description="Key economic data signals and trends"
-            indicators={macroEconomicIndicators}
-          />
-          <MacrometerCard 
-            title="Market Indicators" 
-            description="Technical and sentiment market metrics"
-            indicators={marketIndicators}
-          />
+    <div className="min-h-screen flex flex-col bg-background">
+      <Header />
+      <div className="flex-grow">
+        <div className="container py-12">
+          <div className="space-y-4 mb-8">
+            <h1 className="text-4xl font-heading font-bold">Market Macrometer</h1>
+            <p className="text-muted-foreground text-lg">
+              Comprehensive analysis of key economic and market indicators
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            <MacrometerCard 
+              title="Macroeconomic Indicators" 
+              description="Key economic data signals and trends"
+              indicators={macroEconomicIndicators}
+            />
+            <MacrometerCard 
+              title="Market Indicators" 
+              description="Technical and sentiment market metrics"
+              indicators={marketIndicators}
+            />
+          </div>
         </div>
       </div>
     </div>
