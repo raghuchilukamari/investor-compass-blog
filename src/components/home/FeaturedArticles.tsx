@@ -1,5 +1,8 @@
-
 import BlogCard from "@/components/blog/BlogCard";
+
+interface FeaturedArticlesProps {
+  compact?: boolean;
+}
 
 // Mock blog data
 const featuredArticles = [
@@ -66,7 +69,17 @@ const featuredArticles = [
   }
 ];
 
-export default function FeaturedArticles() {
+export default function FeaturedArticles({ compact = false }: FeaturedArticlesProps) {
+  if (compact) {
+    return (
+      <>
+        {featuredArticles.slice(0, 4).map((article) => (
+          <BlogCard key={article.id} {...article} compact />
+        ))}
+      </>
+    );
+  }
+
   return (
     <section className="py-6 bg-secondary/30">
       <div className="container">
@@ -87,4 +100,3 @@ export default function FeaturedArticles() {
     </section>
   );
 }
-
