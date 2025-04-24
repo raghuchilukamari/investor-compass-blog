@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -9,6 +8,9 @@ import Dashboard from "./pages/Dashboard";
 import Blog from "./pages/Blog";
 import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
+import MarketMacrometer from "./pages/MarketMacrometer";
+import MarketSentiment from "./pages/MarketSentiment";
+import LatestEarnings from "./pages/LatestEarnings";
 
 const queryClient = new QueryClient();
 
@@ -23,7 +25,9 @@ const App = () => (
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/admin" element={<Admin />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/market-macrometer" element={<MarketMacrometer />} />
+          <Route path="/market-sentiment" element={<MarketSentiment />} />
+          <Route path="/latest-earnings" element={<LatestEarnings />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
