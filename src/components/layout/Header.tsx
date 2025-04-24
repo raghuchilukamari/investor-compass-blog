@@ -4,6 +4,13 @@ import { ChartBarIncreasing, Bell, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Header() {
+  const scrollToNewsletter = () => {
+    const newsletterForm = document.querySelector('form[data-newsletter]');
+    if (newsletterForm) {
+      newsletterForm.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
@@ -21,7 +28,12 @@ export default function Header() {
           <Button variant="ghost" size="icon">
             <User className="h-5 w-5" />
           </Button>
-          <Button variant="default" size="sm" className="ml-4 hidden md:flex">
+          <Button 
+            variant="default" 
+            size="sm" 
+            className="ml-4 hidden md:flex"
+            onClick={scrollToNewsletter}
+          >
             Subscribe
           </Button>
         </div>
