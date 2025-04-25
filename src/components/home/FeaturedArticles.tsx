@@ -1,4 +1,3 @@
-
 import BlogCard from "@/components/blog/BlogCard";
 
 interface FeaturedArticlesProps {
@@ -14,11 +13,7 @@ const featuredArticles = [
     date: "April 18, 2023",
     categories: ["Monetary Policy", "Market Strategy"],
     imageSrc: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-    featured: true,
-    author: {
-      name: "Market Analysis Team",
-      avatar: "https://randomuser.me/api/portraits/lego/1.jpg"
-    }
+    featured: true
   },
   {
     id: "tech-sector-analysis",
@@ -26,11 +21,7 @@ const featuredArticles = [
     excerpt: "With the AI revolution gaining momentum, we look at key players positioned to benefit from continued technological advancement.",
     date: "April 15, 2023",
     categories: ["Technology", "Sector Analysis"],
-    imageSrc: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-    author: {
-      name: "Market Analysis Team",
-      avatar: "https://randomuser.me/api/portraits/lego/2.jpg"
-    }
+    imageSrc: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
   },
   {
     id: "inflation-trends",
@@ -38,11 +29,7 @@ const featuredArticles = [
     excerpt: "Recent data suggests inflation may be cooling. We examine the numbers and what they portend for the economy and financial markets.",
     date: "April 12, 2023",
     categories: ["Inflation", "Economic Analysis"],
-    imageSrc: "https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-    author: {
-      name: "Market Analysis Team",
-      avatar: "https://randomuser.me/api/portraits/lego/3.jpg"
-    }
+    imageSrc: "https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
   },
   {
     id: "commodities-outlook",
@@ -50,11 +37,7 @@ const featuredArticles = [
     excerpt: "As the world shifts toward renewable energy, certain commodities are positioned for structural growth. Here's our investment thesis.",
     date: "April 10, 2023",
     categories: ["Commodities", "Energy"],
-    imageSrc: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
-    author: {
-      name: "Market Analysis Team",
-      avatar: "https://randomuser.me/api/portraits/lego/4.jpg"
-    }
+    imageSrc: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
   },
   {
     id: "small-cap-opportunities",
@@ -62,11 +45,7 @@ const featuredArticles = [
     excerpt: "With large caps dominating returns, we explore overlooked small cap companies with robust fundamentals and growth potential.",
     date: "April 8, 2023",
     categories: ["Small Caps", "Equity Analysis"],
-    imageSrc: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-    author: {
-      name: "Market Analysis Team",
-      avatar: "https://randomuser.me/api/portraits/lego/5.jpg"
-    }
+    imageSrc: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
   }
 ];
 
