@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="border-t bg-secondary/40">
       <div className="container py-8 md:py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex flex-col">
             <div className="flex items-center gap-2 mb-4">
               <ChartBarIncreasing className="h-5 w-5 text-primary" />
@@ -39,26 +39,6 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="text-base font-semibold mb-4">Navigation</h3>
-            <ul className="space-y-2">
-              <li><Link to="/" className="text-sm text-muted-foreground hover:text-primary">Home</Link></li>
-              <li><Link to="/dashboard" className="text-sm text-muted-foreground hover:text-primary">Dashboard</Link></li>
-              <li><Link to="/blog" className="text-sm text-muted-foreground hover:text-primary">Blog</Link></li>
-              <li><Link to="/about" className="text-sm text-muted-foreground hover:text-primary">About</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-base font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-sm text-muted-foreground hover:text-primary">Market Analysis</a></li>
-              <li><a href="#" className="text-sm text-muted-foreground hover:text-primary">Investment Strategies</a></li>
-              <li><a href="#" className="text-sm text-muted-foreground hover:text-primary">Economic Reports</a></li>
-              <li><a href="#" className="text-sm text-muted-foreground hover:text-primary">Asset Classes</a></li>
-            </ul>
-          </div>
-          
-          <div>
             <h3 className="text-base font-semibold mb-4">Newsletter</h3>
             <p className="text-sm text-muted-foreground mb-4">
               Subscribe to our newsletter for the latest financial insights.
@@ -78,16 +58,24 @@ export default function Footer() {
             </form>
           </div>
         </div>
-        
+
         <div className="border-t mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Investor GPS. All rights reserved.
-            </p>
-            <div className="flex space-x-4 mt-4 md:mt-0">
-              <a href="#" className="text-sm text-muted-foreground hover:text-primary">Privacy Policy</a>
-              <a href="#" className="text-sm text-muted-foreground hover:text-primary">Terms of Service</a>
-              <a href="#" className="text-sm text-muted-foreground hover:text-primary">Cookie Policy</a>
+          <div className="flex flex-col space-y-4">
+            <div className="bg-secondary/20 p-4 rounded-lg">
+              <p className="text-sm text-muted-foreground italic">
+                Please remember that all perspectives and analysis are for informational purposes only. This is not financial advice, and you should consult with a qualified professional before making any investment decisions.
+              </p>
+            </div>
+            
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <p className="text-sm text-muted-foreground">
+                © {new Date().getFullYear()} Investor GPS. All rights reserved.
+              </p>
+              <div className="flex space-x-4 mt-4 md:mt-0">
+                <a href="#" className="text-sm text-muted-foreground hover:text-primary">Privacy Policy</a>
+                <a href="#" className="text-sm text-muted-foreground hover:text-primary">Terms of Service</a>
+                <a href="#" className="text-sm text-muted-foreground hover:text-primary">Cookie Policy</a>
+              </div>
             </div>
           </div>
         </div>
