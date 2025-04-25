@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -8,7 +7,6 @@ import { ChartBarIncreasing, TrendingDown, TrendingUp, Info, ChartLine } from "l
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import Header from "@/components/layout/Header";
 
-// Economic indicators data with MoM and YoY changes
 const economicIndicators = [
   {
     category: "Employment Indicators",
@@ -304,16 +302,36 @@ export default function MarketMacrometer() {
             <p className="text-muted-foreground text-lg">
               Key economic indicators providing insights into market conditions and economic health
             </p>
+            
+            <div className="flex items-center gap-4 p-4 bg-card rounded-lg shadow-sm">
+              <span className="text-sm font-medium">Legend:</span>
+              <div className="flex items-center gap-6">
+                <div className="flex items-center gap-2">
+                  <Badge className="bg-bullish text-white">
+                    <TrendingUp className="h-3.5 w-3.5 mr-1" />
+                    Bullish
+                  </Badge>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Badge className="bg-neutral text-white">
+                    <ChartBarIncreasing className="h-3.5 w-3.5 mr-1" />
+                    Neutral
+                  </Badge>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Badge className="bg-bearish text-white">
+                    <TrendingDown className="h-3.5 w-3.5 mr-1" />
+                    Bearish
+                  </Badge>
+                </div>
+              </div>
+            </div>
           </div>
           
-          <Accordion type="single" collapsible className="space-y-6">
+          <div className="space-y-6">
             {economicIndicators.map((category) => (
-              <AccordionItem 
-                key={category.category} 
-                value={category.category}
-                className="border rounded-lg bg-card shadow-sm"
-              >
-                <AccordionTrigger className="px-6 py-4 hover:no-underline">
+              <Card key={category.category} className="border rounded-lg bg-card shadow-sm">
+                <div className="px-6 py-4">
                   <div className="flex items-center">
                     <ChartLine className="h-5 w-5 mr-2 text-primary" />
                     <div className="text-left">
@@ -321,8 +339,8 @@ export default function MarketMacrometer() {
                       <p className="text-sm text-muted-foreground">{category.description}</p>
                     </div>
                   </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-6">
+                </div>
+                <div className="px-6 pb-6">
                   <div className="overflow-x-auto">
                     <Table>
                       <TableHeader>
@@ -360,30 +378,22 @@ export default function MarketMacrometer() {
                               </Badge>
                             </TableCell>
                             <TableCell>
-                              <Collapsible>
-                                <div className="flex items-center justify-between">
-                                  <p className="text-sm">{indicator.impact}</p>
-                                  <CollapsibleTrigger
-                                    onClick={() => toggleDetails(indicator.name)}
-                                    className="rounded-full p-1 hover:bg-muted ml-2 flex-shrink-0"
-                                  >
-                                    <Info className="h-4 w-4 text-muted-foreground" />
-                                  </CollapsibleTrigger>
-                                </div>
-                                <CollapsibleContent className="mt-2 bg-muted/20 p-3 rounded-md text-sm">
+                              <div>
+                                <p className="text-sm">{indicator.impact}</p>
+                                <p className="mt-2 bg-muted/20 p-3 rounded-md text-sm">
                                   {indicator.details}
-                                </CollapsibleContent>
-                              </Collapsible>
+                                </p>
+                              </div>
                             </TableCell>
                           </TableRow>
                         ))}
                       </TableBody>
                     </Table>
                   </div>
-                </AccordionContent>
-              </AccordionItem>
+                </div>
+              </Card>
             ))}
-          </Accordion>
+          </div>
         </div>
       </div>
     </div>
