@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="border-t bg-secondary/40">
       <div className="container py-8 md:py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex flex-col">
             <div className="flex items-center gap-2 mb-4">
               <ChartBarIncreasing className="h-5 w-5 text-primary" />
@@ -39,43 +39,10 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="text-base font-semibold mb-4">Navigation</h3>
-            <ul className="space-y-2">
-              <li><Link to="/" className="text-sm text-muted-foreground hover:text-primary">Home</Link></li>
-              <li><Link to="/dashboard" className="text-sm text-muted-foreground hover:text-primary">Dashboard</Link></li>
-              <li><Link to="/blog" className="text-sm text-muted-foreground hover:text-primary">Blog</Link></li>
-              <li><Link to="/about" className="text-sm text-muted-foreground hover:text-primary">About</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-base font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-sm text-muted-foreground hover:text-primary">Market Analysis</a></li>
-              <li><a href="#" className="text-sm text-muted-foreground hover:text-primary">Investment Strategies</a></li>
-              <li><a href="#" className="text-sm text-muted-foreground hover:text-primary">Economic Reports</a></li>
-              <li><a href="#" className="text-sm text-muted-foreground hover:text-primary">Asset Classes</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-base font-semibold mb-4">Newsletter</h3>
-            <p className="text-sm text-muted-foreground mb-4">
-              Subscribe to our newsletter for the latest financial insights.
+            <h3 className="text-base font-semibold mb-4">Disclaimer</h3>
+            <p className="text-sm text-muted-foreground">
+              Please remember that all perspectives and analysis are for informational purposes only. This is not financial advice, and you should consult with a qualified professional before making any investment decisions.
             </p>
-            <form className="flex space-x-2" data-newsletter>
-              <input
-                type="email"
-                placeholder="Your email"
-                className="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-              />
-              <button
-                type="submit"
-                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2"
-              >
-                Subscribe
-              </button>
-            </form>
           </div>
         </div>
         
